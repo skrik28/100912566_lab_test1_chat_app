@@ -6,9 +6,11 @@ const db = require('./config/db.config');
 const User = require('./models/User');
 const GroupMessage = require('./models/GroupMessage');
 const PrivateMessage = require('./models/PrivateMessage');
+const authRoutes = require('./routes/auth.routes');
 
 app.use(express.json());
 app.use(express.static('views'));
+app.use('/routes/auth', authRoutes);
 
 
 
