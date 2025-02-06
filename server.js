@@ -10,6 +10,7 @@ const authRoutes = require('./routes/auth.routes');
 
 app.use(express.json());
 app.use(express.static('views'));
+app.use(express.static('public'));
 app.use('/routes/auth', authRoutes);
 
 
